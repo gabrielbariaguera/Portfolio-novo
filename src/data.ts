@@ -8,8 +8,8 @@ export const profile = {
   github: "https://github.com/gabrielbariaguera",
   linkedin: "https://www.linkedin.com/in/gabriel-aguera-baria-435058295/",
   instagram: "https://www.instagram.com/gabriel_aguera_/",
-  resume: "#",
-  photo: "/gabriel.jpg",
+  resume: "/curriculo-gabriel-aguera-baria.pdf",
+  photo: "/gabriel.jpg?v=2",
   about: [
     "Gabriel Aguera Baria é engenheiro de software. Constrói produtos full stack com React, TypeScript e Node.js — da API ao detalhe da interface.",
     "Estuda e entrega no ciclo curto: prototipar, validar, corrigir e publicar. O foco é código claro, dados honestos e experiência que alguém queira usar de novo.",
@@ -87,9 +87,9 @@ export const projects = [
     title: "CTC",
     type: "Full stack",
     description:
-      "Plataforma completa com React, TypeScript, Node.js, API REST, PostgreSQL e Prisma. Autenticação JWT e fluxos de comunicação. Em breve no ar.",
+      "Controle Tempero Caseiro: gestão de vendas e produção para restaurante. O balcão registra o pedido, a cozinha recebe na hora (Socket.IO) e o dono acompanha o faturamento. Preço no servidor, histórico imutável e JWT.",
     stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
-    href: "#",
+    href: "https://github.com/gabrielbariaguera/CTC",
   },
 ];
 
@@ -118,17 +118,5 @@ export const timeline = [
     title: "Estágio",
     place: "Instituição de ensino",
     text: "Atividades desenvolvidas: desenvolvimento de um software para otimização da criação de documentos dos alunos e funcionários da instituição (abonadas, transferências e dispensas).",
-  },
-  {
-    period: "2024 — 2025",
-    title: "Desenvolvimento web",
-    place: "Formação prática",
-    text: "Do HTML ao React: componentes, estado, rotas e integração com backends reais.",
-  },
-  {
-    period: "Antes",
-    title: "Fundamentos",
-    place: "Lógica e bases",
-    text: "Algoritmos, estruturas de dados e o hábito de aprender fazendo — e refazendo até ficar certo.",
   },
 ];

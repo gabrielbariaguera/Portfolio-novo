@@ -91,20 +91,18 @@ function PhotoSlot() {
   const [failed, setFailed] = useState(false);
 
   return (
-    <div className="mx-auto w-full max-w-[16rem] lg:mx-0">
-      <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-dashed border-line bg-elev/40">
+    <div className="mx-auto w-full max-w-[18rem] lg:mx-0">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-elev shadow-[0_18px_40px_rgb(8_14_55_/_0.35)]">
         {!failed ? (
           <img
             src={profile.photo}
             alt={profile.name}
-            className="size-full object-cover"
+            className="size-full object-cover object-[58%_32%]"
             onError={() => setFailed(true)}
           />
         ) : (
           <div className="flex size-full flex-col items-center justify-center gap-2 px-4 text-center text-sm text-mist">
             <span className="font-display text-4xl text-ice">GA</span>
-            <span>Sua foto</span>
-            <span className="text-xs">Coloque o arquivo em public/gabriel.jpg</span>
           </div>
         )}
       </div>
@@ -347,6 +345,7 @@ export default function App() {
           <a
             className="enter enter-4 mt-9 inline-flex rounded-xl bg-brand px-6 py-3 text-sm tracking-wide text-white no-underline transition hover:brightness-110"
             href={profile.resume}
+            download="Curriculo-Gabriel-Aguera-Baria.pdf"
           >
             Baixar currículo
           </a>
@@ -384,7 +383,7 @@ export default function App() {
           <SectionHead title="Sobre" index="01 — Perfil" />
         </Reveal>
         <Reveal delay="80ms">
-        <div className="grid items-start gap-10 lg:grid-cols-[14rem_1fr_0.95fr] lg:gap-12">
+        <div className="grid items-start gap-10 lg:grid-cols-[18rem_1fr_0.95fr] lg:gap-12">
           <PhotoSlot />
           <div className="space-y-4 text-lg leading-relaxed text-frost/90">
             <h3 className="font-display text-3xl font-normal text-frost">{profile.name}</h3>
