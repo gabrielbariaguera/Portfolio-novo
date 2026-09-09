@@ -1,0 +1,134 @@
+export const profile = {
+  firstName: "Gabriel",
+  name: "Gabriel Aguera Baria",
+  role: "Software Engineer",
+  location: "São João de Iracema, SP",
+  availability: "Aberto a oportunidades",
+  email: "gabriel.aguerabaria@gmail.com",
+  github: "https://github.com/gabrielbariaguera",
+  linkedin: "https://www.linkedin.com/in/gabriel-aguera-baria-435058295/",
+  instagram: "https://www.instagram.com/gabriel_aguera_/",
+  resume: "#",
+  photo: "/gabriel.jpg",
+  about: [
+    "Gabriel Aguera Baria é engenheiro de software. Constrói produtos full stack com React, TypeScript e Node.js — da API ao detalhe da interface.",
+    "Estuda e entrega no ciclo curto: prototipar, validar, corrigir e publicar. O foco é código claro, dados honestos e experiência que alguém queira usar de novo.",
+    "Aberto a estágio, freelance e times de produto. Se o problema pede sistema bem feito, vale conversar.",
+  ],
+};
+
+export const socials = [
+  { name: "GitHub", href: profile.github, id: "github" as const },
+  { name: "LinkedIn", href: profile.linkedin, id: "linkedin" as const },
+  { name: "Instagram", href: profile.instagram, id: "instagram" as const },
+];
+
+export const nav = [
+  { id: "topo", label: "Home" },
+  { id: "sobre", label: "Sobre" },
+  { id: "trabalho", label: "Trabalho" },
+  { id: "experiencia", label: "Trajetória" },
+  { id: "contato", label: "Contato" },
+];
+
+export const marquee = [
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Python",
+  "React",
+  "Node.js",
+  "PostgreSQL",
+  "Prisma",
+  "Git",
+  "GitHub",
+  "VS Code",
+  "Postman",
+  "Cursor",
+  "Copilot",
+  "LLM",
+  "Prompt",
+  "IA generativa",
+];
+
+export const projects = [
+  {
+    year: "2026",
+    title: "Docs EMEF",
+    type: "Produto real",
+    description:
+      "Gerador de documentos escolares em Word (.docx): transferência, abonada, dispensa, histórico, matrícula e extras. Formulário do aluno, série e emissor — usado em rotina de escritório, no ar em produção.",
+    stack: ["JavaScript", "HTML", "DOCX", "Vercel"],
+    href: "https://docsemef.vercel.app/",
+    repo: "https://github.com/gabrielbariaguera/Gerador-de-documentos",
+  },
+  {
+    year: "2026",
+    title: "Receitalhada",
+    type: "Full stack · IA",
+    description:
+      "Comunidade de receitas com publicação, votos, categorias e busca por significado. A pesquisa por IA entende pedido em linguagem natural — restrição, tempo e ingrediente — em vez de só bater palavra no título.",
+    stack: ["React", "TypeScript", "IA", "Vercel"],
+    href: "https://receitalhada.vercel.app/",
+  },
+  {
+    year: "2025",
+    title: "ForBook",
+    type: "Mobile",
+    description:
+      "App de compra, venda e descoberta de livros para estudantes. Expo Router, câmera, imagens, armazenamento seguro e validação com Zod. Contribuição em time no React Native.",
+    stack: ["React Native", "Expo", "TypeScript", "Zod"],
+    href: "https://github.com/MuriloZague/forbook-app",
+    repo: "https://github.com/MuriloZague/forbook-app",
+  },
+  {
+    year: "2026",
+    title: "CTC",
+    type: "Full stack",
+    description:
+      "Plataforma completa com React, TypeScript, Node.js, API REST, PostgreSQL e Prisma. Autenticação JWT e fluxos de comunicação. Em breve no ar.",
+    stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
+    href: "#",
+  },
+];
+
+export const skills = [
+  {
+    group: "Front-end",
+    items: ["React", "TypeScript", "HTML/CSS", "Vite"],
+  },
+  {
+    group: "Back-end",
+    items: ["Node.js", "API REST", "PostgreSQL", "Prisma"],
+  },
+  {
+    group: "Prática",
+    items: ["Git", "GitHub", "VS Code", "Postman"],
+  },
+  {
+    group: "IA",
+    items: ["Cursor", "Copilot", "LLM", "Prompt"],
+  },
+];
+
+export const timeline = [
+  {
+    period: "2025 — agora",
+    title: "Estágio",
+    place: "Instituição de ensino",
+    text: "Atividades desenvolvidas: desenvolvimento de um software para otimização da criação de documentos dos alunos e funcionários da instituição (abonadas, transferências e dispensas).",
+  },
+  {
+    period: "2024 — 2025",
+    title: "Desenvolvimento web",
+    place: "Formação prática",
+    text: "Do HTML ao React: componentes, estado, rotas e integração com backends reais.",
+  },
+  {
+    period: "Antes",
+    title: "Fundamentos",
+    place: "Lógica e bases",
+    text: "Algoritmos, estruturas de dados e o hábito de aprender fazendo — e refazendo até ficar certo.",
+  },
+];
