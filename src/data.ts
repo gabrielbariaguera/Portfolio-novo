@@ -65,6 +65,15 @@ export const projects = [
   },
   {
     year: "2026",
+    title: "TierShow",
+    type: "Produto real",
+    description:
+      "Tier lists ao vivo: a galera envia imagens, o host aprova, destaca e ranqueia. Votação, transmissão pronta para OBS e exportação em PNG — sem conta, a sala existe só durante o show.",
+    stack: ["React", "Tempo real", "OBS", "Web"],
+    href: "https://tiershow.com.br",
+  },
+  {
+    year: "2026",
     title: "Receitalhada",
     type: "Full stack · IA",
     description:

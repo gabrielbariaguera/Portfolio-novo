@@ -80,7 +80,7 @@ function CodeCard() {
 }
 
 function Kw({ children }: { children: ReactNode }) {
-  return <span className="text-brand">{children}</span>;
+  return <span className="code-kw">{children}</span>;
 }
 
 function Str({ children }: { children: ReactNode }) {
@@ -130,7 +130,7 @@ function ThemeSwitch({
   return (
     <button
       type="button"
-      className="glass grid size-10 place-items-center rounded-xl text-frost transition hover:bg-brand/40"
+      className="glass grid size-10 shrink-0 place-items-center rounded-xl text-frost transition hover:bg-brand/40"
       aria-label={next === "light" ? "Ativar tema claro" : "Ativar tema escuro"}
       title={next === "light" ? "Tema claro" : "Tema escuro"}
       onClick={() => onChange(next)}
@@ -277,13 +277,16 @@ export default function App() {
 
   return (
     <>
-    <header className="site-header glass flex flex-wrap items-center justify-between gap-3 px-[6vw] py-4">
-        <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Seções">
+    <header className="site-header glass flex items-start justify-between gap-3 px-[4vw] py-3 sm:items-center sm:px-[6vw] sm:py-4">
+        <nav
+          className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-2 sm:gap-x-6"
+          aria-label="Seções"
+        >
           {nav.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="text-[0.82rem] tracking-[0.14em] text-mist uppercase no-underline transition-colors hover:text-frost"
+              className="text-[0.72rem] tracking-[0.12em] text-mist uppercase no-underline transition-colors hover:text-frost sm:text-[0.82rem] sm:tracking-[0.14em]"
             >
               {item.label}
             </a>
@@ -336,10 +339,10 @@ export default function App() {
           <p className="enter enter-1 mb-3 text-[1.05rem] font-light text-mist">
             Olá, eu sou
           </p>
-          <h1 className="enter enter-2 font-display whitespace-nowrap text-[clamp(1.05rem,3.1vw,2.7rem)] leading-none font-normal tracking-tight">
+          <h1 className="enter enter-2 font-display text-[clamp(1.35rem,7vw,2.7rem)] leading-[1.05] font-normal tracking-tight md:whitespace-nowrap md:text-[clamp(1.05rem,3.1vw,2.7rem)]">
             {profile.name}
           </h1>
-          <p className="enter enter-3 mt-4 text-[clamp(0.95rem,2vw,1.35rem)] font-light tracking-[0.18em] text-mist uppercase">
+          <p className="enter enter-3 mt-4 text-[clamp(0.82rem,3.4vw,1.35rem)] font-light tracking-[0.12em] text-mist uppercase sm:tracking-[0.18em]">
             {profile.role}
           </p>
           <a
@@ -420,11 +423,11 @@ export default function App() {
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={`${i * 90}ms`}>
             <article
-              className="group grid items-start gap-5 border-b border-line py-6 transition-transform duration-200 hover:translate-x-1.5 lg:grid-cols-[5.5rem_1fr_auto]"
+              className="group grid items-start gap-4 border-b border-line py-6 transition-transform duration-200 hover:translate-x-1.5 sm:gap-5 lg:grid-cols-[5.5rem_1fr_auto]"
             >
               <div className="pt-1.5 text-mist">{project.year}</div>
-              <div>
-                <h3 className="mb-1.5 font-display text-3xl font-normal">{project.title}</h3>
+              <div className="min-w-0">
+                <h3 className="mb-1.5 font-display text-[clamp(1.6rem,4vw,1.9rem)] font-normal lg:text-3xl">{project.title}</h3>
                 <Tag>{project.type}</Tag>
                 <p className="mt-2 mb-3.5 max-w-[62ch] leading-relaxed text-mist">
                   {project.description}
@@ -435,7 +438,7 @@ export default function App() {
                   ))}
                 </div>
               </div>
-              <div className="hidden self-center lg:flex lg:flex-col lg:gap-2">
+              <div className="flex flex-row gap-2 self-start lg:flex-col lg:self-center">
                 {project.href !== "#" && (
                   <a
                     className="glass grid size-11 place-items-center rounded-xl no-underline transition group-hover:bg-brand/40"
